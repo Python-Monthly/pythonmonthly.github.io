@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Python Monthly'
 SITENAME = 'Python Monthly'
 SITEURL = ''
+THEME = 'pelican-clean-blog'
 
 PATH = 'content'
 
