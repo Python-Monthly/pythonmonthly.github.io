@@ -1,4 +1,4 @@
-Title: How to create a blog post
+Title: How to Create a Blog Post
 Date: 2016-10-16 10:28
 Modified: 
 Author: Steve Gregg
