@@ -19,7 +19,7 @@ def make_entry(title):
     title_no_whitespaces = title.lower().strip().replace(' ', '-')
     f_create = "content/{}_{:0>2}_{:0>2}_{}.md".format(
         today.year, today.month, today.day, title_no_whitespaces)
-    t = TEMPLATE.strip().format(title=title,
+    t = TEMPLATE.strip().format(title=title.title(),
                                 year=today.year,
                                 month=today.month,
                                 day=today.day,
