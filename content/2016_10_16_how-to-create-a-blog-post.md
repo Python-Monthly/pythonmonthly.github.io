@@ -1,6 +1,5 @@
 Title: How to Create a Blog Post
 Date: 2016-10-16 10:28
-Modified: 
 Author: Steve Gregg
 Category: General
 Tags: blog
@@ -14,7 +13,6 @@ This generates a file in the 'content' folder with the date and blog post title 
 ```
 Title: My new blog post title
 Date: 2016-10-16 10:28
-Modified: 
 Author: 
 Category: 
 Tags: 
@@ -27,7 +25,6 @@ The second way to create a blog post is to manually do what the Python script do
 ```
 Title: My new blog post title
 Date: 2016-10-16 10:28
-Modified: 
 Author: 
 Category: 
 Tags: 
@@ -38,7 +35,6 @@ Just as the first method above, add your name to the 'author' field and also fil
 
 ### Things to note:###
 
-* The 'Modified' field is optional and is used to show when a post was updated
 * The time in the 'Date' field is optional
 * The 'Category' field is used to categorize posts by topic. If you are unsure of a category, you can use the 'General' category
 * The 'Tags' field is also optional and is used to tag your post with keywords.
