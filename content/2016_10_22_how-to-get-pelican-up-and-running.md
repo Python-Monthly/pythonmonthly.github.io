@@ -27,8 +27,8 @@ Activate the newly created virtual environment
 
 `$ source venv/bin/activate`
 
-Now we can install Pelican and Markdown
+Now we can install all the required components for the project
 
-`$ pip install pelican markdown'
+`$ pip install -r requirements.txt'
 
 You now have everything you need to test and contribute to our site.
