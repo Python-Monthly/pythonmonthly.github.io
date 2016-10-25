@@ -27,8 +27,9 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github', 'https://github.com/Python-Monthly'),
+          ('google','https://plus.google.com/112952259748021652374'),
+          ('envelope','mailto:info@pythonmonthly.com'))
 
 DEFAULT_PAGINATION = 10
 
