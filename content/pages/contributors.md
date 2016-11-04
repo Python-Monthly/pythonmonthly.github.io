@@ -14,11 +14,11 @@ Email: kennethlove@gmail.com
 Mallory Hancock  
 Email: malloryhancock89@gmail.com
 
-Andy Culler
+Andy Culler  
 Email: adc4392@gmail.com
 
-Daniel Kaczmarczyk
+Daniel Kaczmarczyk  
 Email: danielkaczmarczyk2@gmail.com
 
-TJ Nel
+TJ Nel  
 Email: mikiozen@gmail.com
