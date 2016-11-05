@@ -38,3 +38,8 @@ DEFAULT_PAGINATION = 10
 
 
 THEME = 'theme/pelican-clean-blog'
+
+#Nav Menu Options
+MENUITEMS = [
+	('Videos', 'category/videos.html')
+	]
