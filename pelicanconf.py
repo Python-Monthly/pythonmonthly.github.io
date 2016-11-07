@@ -29,7 +29,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (('github', 'https://github.com/Python-Monthly'),
           ('google','https://plus.google.com/112952259748021652374'),
-          ('envelope','mailto:info@pythonmonthly.com'))
+          ('envelope','mailto:info@pythonmonthly.com'),
+	  ('slack','https://pythonmonthly.slack.com'))
 
 DEFAULT_PAGINATION = 10
 
