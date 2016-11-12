@@ -42,5 +42,5 @@ THEME = 'theme/pelican-clean-blog'
 
 #Nav Menu Options
 MENUITEMS = [
-	('Videos', 'category/videos.html')
+	('Videos', 'http://pythonmonthly.com/category/videos.html')
 	]
