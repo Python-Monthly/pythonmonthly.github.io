@@ -45,6 +45,7 @@ MENUITEMS = [
 	('Videos', 'category/videos.html')
 	]
 
+
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS=['sitemap']
 
@@ -62,3 +63,10 @@ SITEMAP = {
     },
     'exclude': ['tag/', 'category/', 'css/', 'js/', 'author', 'theme']
 }
+
+#Static Path/File Options
+STATIC_PATHS = ['extra/robots.txt']
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'}
+}
+
