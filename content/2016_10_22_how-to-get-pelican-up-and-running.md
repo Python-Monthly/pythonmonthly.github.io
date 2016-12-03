@@ -13,7 +13,7 @@ To get Pelican up and running, you will first need to clone our repository
 
 Go into the project folder
 
-`$ cd Python-Monthly-Website`
+`$ cd pythonmonthly.github.io`
 
 The next step is to create a virtual environment within which to run Pelican. This is optional but highly recommended. If you do not have 'virtualenv' installed, do so by typing the following
 
@@ -29,6 +29,11 @@ Activate the newly created virtual environment
 
 Now we can install all the required components for the project
 
-`$ pip install -r requirements.txt'
+`$ pip install -r requirements.txt`
 
-You now have everything you need to test and contribute to our site.
+You now have everything you need to test and contribute to our site. 
+
+We communicate using Slack, you can
+
+<a class="typeform-share button" href="https://jay400.typeform.com/to/tfYA6n" data-mode="1" target="_blank">Request an invite</a>
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script><br>

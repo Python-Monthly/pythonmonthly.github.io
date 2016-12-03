@@ -29,7 +29,9 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (('github', 'https://github.com/Python-Monthly'),
           ('google','https://plus.google.com/112952259748021652374'),
-          ('envelope','mailto:info@pythonmonthly.com'))
+          ('envelope','mailto:info@pythonmonthly.com'),
+	  	  ('slack','https://pythonmonthly.slack.com'),
+	  	  ('youtube','https://www.youtube.com/channel/UC7ROIuBkGtLpCIMsgoIwv0Q'))
 
 DEFAULT_PAGINATION = 10
 
@@ -38,3 +40,35 @@ DEFAULT_PAGINATION = 10
 
 
 THEME = 'theme/pelican-clean-blog'
+
+#Nav Menu Options
+MENUITEMS = [
+	('YouTube','https://www.youtube.com/channel/UC7ROIuBkGtLpCIMsgoIwv0Q'),
+	('Videos', 'http://pythonmonthly.com/category/videos.html')
+	]
+
+
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS=['sitemap']
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    },
+    'exclude': ['tag/', 'category/', 'css/', 'js/', 'author', 'theme']
+}
+
+#Static Path/File Options
+STATIC_PATHS = ['extra/robots.txt']
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'}
+}
+
