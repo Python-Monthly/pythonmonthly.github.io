@@ -49,7 +49,7 @@
             <meta property="article:author" content="/author/tj-nel.html">
 	<meta property="og:url" content="/tinydb-intro.html">
 	<meta property="og:title" content="TinyDB the NoSQL alternative to SQLlite">
-	<meta property="article:published_time" content="2010-12-22 08:30:00-08:00">
+	<meta property="article:published_time" content="2016-12-22 08:30:00-08:00">
             <meta property="og:description" content="A Introduction to Tinydb the NoSQL alternative to SQLite for a Self-contained, File Based, Document Oriented database, thats really small!">
 
             <meta property="og:image" content="/theme/images/post-bg.jpg">
@@ -97,9 +97,9 @@
                         <h1>TinyDB the NoSQL alternative to SQLlite</h1>
                         <span class="meta">Posted by
                                 <a href="/author/tj-nel.html">TJ Nel</a>
-                             on Wed 22 December 2010
+                             on Thu 22 December 2016
                         </span>
-                            <span class="meta">Updated on Wed 22 December 2010</span>
+                            <span class="meta">Updated on Thu 22 December 2016</span>
                         
                     </div>
                 </div>
@@ -114,39 +114,39 @@
     <!-- Post Content -->
     <article>
         <h3>A introduction to Tinydb the NoSQL alternative to SQLite for a self contained, serverless database.</h3>
-<p>Let face it the future of the internet revolves around APIs, we are in a data-driven world and the format that we move this data is JSON. So it would be logical to have a database that speaks JSON and NoSQL database often provide a JSON like syntax that work well with this data.
-<strong>enter TinyDB...</strong>
-<a href="https://tinydb.readthedocs.io">TinyDB</a> is a Document oriented NoSQL database that was written with only about 1200 lines of code! Just like with SQLite, TinyDB is great for quick and small scoped projects and testing. The database is stored in a .json file which as you guessed it is a simple json file that you can query later.Best of all it is written in good 'ole Python.</p>
+<p>Let face it the future of the internet revolves around APIs, we are in a data-driven world and the format that we move this data is JSON. So it would be logical to have a database that speaks JSON and NoSQL database often provide a JSON like syntax that work well with this data.</p>
+<p><strong>enter TinyDB...</strong></p>
+<p><a href="https://tinydb.readthedocs.io">TinyDB</a> is a Document oriented NoSQL database that was written with only about 1200 lines of code! Just like with SQLite, TinyDB is great for quick and small scoped projects and testing. The database is stored in a .json file which as you guessed it is a simple json file that you can query later.Best of all it is written in good 'ole Python.</p>
 <h4>Example: Storing API Responses with TinyDB</h4>
 <p>In this example I am going to show you how to store a json formatted API response to a TinyDB databate. From there you can add, remove and modify entries within the database. </p>
 <h4>Installing TinyDB</h4>
 <p>You can install TinyDB using PIP.</p>
-<div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">tinydb</span>
+<div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">tinydb</span>
 </pre></div>
 
 
 <h4>Using TinyDB</h4>
 <p>Just like with any other python module you can import TinyDB but it is best practice to import the submodules TinyDB and Query (see below).</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tinydb</span> <span class="kn">import</span> <span class="n">TinyDB</span><span class="p">,</span> <span class="n">Query</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">tinydb</span> <span class="kn">import</span> <span class="n">TinyDB</span><span class="p">,</span> <span class="n">Query</span>
 </pre></div>
 
 
 <p>Then you will need to create a database object</p>
-<div class="highlight"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">TinyDB</span><span class="p">(</span><span class="s1">&#39;dbname.json&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">db</span> <span class="o">=</span> <span class="n">TinyDB</span><span class="p">(</span><span class="s">&#39;dbname.json&#39;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>After that you are all set, just work directly with the database object you just created.</p>
 <h4>Setting up your API Call</h4>
 <p>For this example we will be using the People In Space API available from <a href="http://open-notify.org/Open-Notify-API/People-In-Space/">Open Notify</a>. This API return a list of all of the members currently on the International Space Station. To use this API you need to sent a HTTP request to <strong>http://api.open-notify.org/astros.json</strong> with no authentication or parameters required and you will get back a JSON formatted response with all of the current astronauts on the ISS. So in python the request to get the JSON back looks like this...</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://api.open-notify.org/astros.json&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;http://api.open-notify.org/astros.json&quot;</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </pre></div>
 
 
 <p>So if we print data we should get the following output:</p>
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
 
@@ -154,19 +154,19 @@
 <p>{'number': 6, 'people': [{'craft': 'ISS', 'name': 'Sergey Rizhikov'}, {'craft': &gt;'ISS', 'name': 'Andrey Borisenko'}, {'craft': 'ISS', 'name': 'Shane Kimbrough'}, {'craft': 'ISS', 'name': 'Oleg Novitskiy'}, {'craft': 'ISS', 'name': 'Thomas Pesquet'}, {'craft': 'ISS', 'name': 'Peggy Whitson'}], 'message': 'success'}</p>
 </blockquote>
 <h4>Adding API Call Results to TinyDB</h4>
-<p>Now we want to put the people from that JSON response into a TinyDB database. So to do  this we need to learn how to add a entry into a TinyDB database. TinyDB has a couple of functions that allow you to modify the database file you are working with. 
-<strong>Inserting Data</strong>
-To insert or add data into your database you would use <code>db.insert(...)</code> 
-<strong>Updating Data</strong>
-To update information in your database you would use <code>db.update(fields, query)</code> this works by updating all elements matching the query with fields.</p>
-<p>Right now we want to add every entry from the list of people in space so we will be using insert. So if we wanted to add the Sergey Rizhikov from the data above we would use the syntax <code>db.insert({'craft': 'ISS', 'name': 'Sergey Rizhikov'})</code>.  But we dont want to copy-pasta every person in space, so interating through the people section of the JSON output and putting that into the <code>db.insert()</code> statement using the below code should populate our database.</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;people&#39;</span><span class="p">]:</span>
+<p>Now we want to put the people from that JSON response into a TinyDB database. So to do  this we need to learn how to add a entry into a TinyDB database. TinyDB has a couple of functions that allow you to modify the database file you are working with. </p>
+<p><strong>Inserting Data</strong></p>
+<p>To insert or add data into your database you would use <code>db.insert(...)</code> </p>
+<p><strong>Updating Data</strong></p>
+<p>To update information in your database you would use <code>db.update(fields, query)</code> this works by updating all elements matching the query with fields.</p>
+<p>Right now we want to add every entry from the list of people in space so we will be using insert. So if we wanted to add the Sergey Rizhikov from the data above we would use the syntax <code>db.insert({'craft': 'ISS', 'name': 'Sergey Rizhikov'})</code>.  But we dont want to copy-paste every person in space, so iterating through the people section of the JSON output and putting that into the <code>db.insert()</code> statement using the below code should populate our database.</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;people&#39;</span><span class="p">]:</span>
     <span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
 </pre></div>
 
 
 <p>and using <code>db.all()</code> which prints out the contents of your tiny database confirms the people were inserted into the database.</p>
-<div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 </pre></div>
 
 
@@ -179,13 +179,13 @@ To update information in your database you would use <code>db.update(fields, que
 </blockquote>
 <h4>Querying the Database</h4>
 <p>Now that we have data in our database, it would be useful to be able to retieve from it. TinyDB allows you to query that data by using a Query() object. So if you wanted to get a list of all the people in space on the ISS you can use this code:</p>
-<div class="highlight"><pre><span></span><span class="n">Astro</span> <span class="o">=</span> <span class="n">Query</span><span class="p">()</span>
-<span class="n">db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">craft</span> <span class="o">==</span> <span class="s1">&#39;ISS&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">Astro</span> <span class="o">=</span> <span class="n">Query</span><span class="p">()</span>
+<span class="n">db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">craft</span> <span class="o">==</span> <span class="s">&#39;ISS&#39;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>Unsuprisingly you will get all of the entries put in with ISS as the craft (which is all of them). But what if you wanted to search for a speciifc person like Peggy? Well you could you use this code:</p>
-<div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Peggy&#39;</span><span class="p">))</span>
+<div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">&#39;Peggy&#39;</span><span class="p">))</span>
 </pre></div>
 
 
@@ -200,7 +200,7 @@ To update information in your database you would use <code>db.update(fields, que
 </blockquote>
 <h4>Updating the fields in the Database</h4>
 <p>Now what if one of the people in space changes the craft they are on from the ISS to Tiangong 1 (We will call it T1) we can update their data by following the syntax we previously talked about. So lets send Peggy Whitson to T1.</p>
-<div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;craft&#39;</span><span class="p">:</span><span class="s1">&#39;T1&#39;</span><span class="p">},</span> <span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Peggy&#39;</span><span class="p">)</span> <span class="p">)</span>
+<div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">&#39;craft&#39;</span><span class="p">:</span><span class="s">&#39;T1&#39;</span><span class="p">},</span> <span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">&#39;Peggy&#39;</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
 
@@ -215,7 +215,7 @@ To update information in your database you would use <code>db.update(fields, que
 </blockquote>
 <h4>Removing Data from the Database</h4>
 <p>Lets now send someone home, TinyDB allows you to remove entries in the database using <code>db.remove()</code> where it will remove all of the entries matching the query placed inside of the parenthesis. Lets send Shane home and remove him from the database with the following code:</p>
-<div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Shane&#39;</span><span class="p">))</span>
+<div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">&#39;Shane&#39;</span><span class="p">))</span>
 </pre></div>
 
 
@@ -225,14 +225,22 @@ To update information in your database you would use <code>db.update(fields, que
  {'craft': 'ISS', 'name': 'Andrey Borisenko'},
  {'craft': 'ISS', 'name': 'Oleg Novitskiy'},
  {'craft': 'ISS', 'name': 'Thomas Pesquet'},
- {'craft': 'T1', 'name': 'Peggy Whitson'}]
- #### Clearing the database
- Last but not least if you want to clear out the database you can just run <code>db.purge()</code> and you will have a nice and empty database to work with. </p>
+ {'craft': 'T1', 'name': 'Peggy Whitson'}]</p>
 </blockquote>
-<p>##### For more TinyDB info:
- * https://tinydb.readthedocs.io
- * https://github.com/msiemens/tinydb
- * https://pypi.python.org/pypi/tinydb</p>
+<h4>Clearing the database</h4>
+<p>Last but not least if you want to clear out the database you can just run <code>db.purge()</code> and you will have a nice and empty database to work with. </p>
+<p><strong>For more TinyDB info:</strong></p>
+<ul>
+<li>
+<p><a href="https://tinydb.readthedocs.io">https://tinydb.readthedocs.io</a></p>
+</li>
+<li>
+<p><a href="https://github.com/msiemens/tinydb">https://github.com/msiemens/tinydb</a></p>
+</li>
+<li>
+<p><a href="https://pypi.python.org/pypi/tinydb">https://pypi.python.org/pypi/tinydb</a></p>
+</li>
+</ul>
     </article>
 
         <div class="tags">
