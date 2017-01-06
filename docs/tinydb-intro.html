@@ -9,8 +9,6 @@
 
         <title>TinyDB the NoSQL alternative to SQLlite</title>
 
-            <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Python Monthly Full Atom Feed" />
-            <link href="/feeds/python.atom.xml" type="application/atom+xml" rel="alternate" title="Python Monthly Categories Atom Feed" />
         <!-- Bootstrap Core CSS -->
         <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
 
@@ -121,32 +119,32 @@
 <p>In this example I am going to show you how to store a json formatted API response to a TinyDB databate. From there you can add, remove and modify entries within the database. </p>
 <h4>Installing TinyDB</h4>
 <p>You can install TinyDB using PIP.</p>
-<div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">tinydb</span>
+<div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">tinydb</span>
 </pre></div>
 
 
 <h4>Using TinyDB</h4>
 <p>Just like with any other python module you can import TinyDB but it is best practice to import the submodules TinyDB and Query (see below).</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">tinydb</span> <span class="kn">import</span> <span class="n">TinyDB</span><span class="p">,</span> <span class="n">Query</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tinydb</span> <span class="kn">import</span> <span class="n">TinyDB</span><span class="p">,</span> <span class="n">Query</span>
 </pre></div>
 
 
 <p>Then you will need to create a database object</p>
-<div class="highlight"><pre><span class="n">db</span> <span class="o">=</span> <span class="n">TinyDB</span><span class="p">(</span><span class="s">&#39;dbname.json&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">TinyDB</span><span class="p">(</span><span class="s1">&#39;dbname.json&#39;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>After that you are all set, just work directly with the database object you just created.</p>
 <h4>Setting up your API Call</h4>
 <p>For this example we will be using the People In Space API available from <a href="http://open-notify.org/Open-Notify-API/People-In-Space/">Open Notify</a>. This API return a list of all of the members currently on the International Space Station. To use this API you need to sent a HTTP request to <strong>http://api.open-notify.org/astros.json</strong> with no authentication or parameters required and you will get back a JSON formatted response with all of the current astronauts on the ISS. So in python the request to get the JSON back looks like this...</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">requests</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;http://api.open-notify.org/astros.json&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://api.open-notify.org/astros.json&quot;</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </pre></div>
 
 
 <p>So if we print data we should get the following output:</p>
-<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
 
@@ -160,13 +158,13 @@
 <p><strong>Updating Data</strong></p>
 <p>To update information in your database you would use <code>db.update(fields, query)</code> this works by updating all elements matching the query with fields.</p>
 <p>Right now we want to add every entry from the list of people in space so we will be using insert. So if we wanted to add the Sergey Rizhikov from the data above we would use the syntax <code>db.insert({'craft': 'ISS', 'name': 'Sergey Rizhikov'})</code>.  But we dont want to copy-paste every person in space, so iterating through the people section of the JSON output and putting that into the <code>db.insert()</code> statement using the below code should populate our database.</p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;people&#39;</span><span class="p">]:</span>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;people&#39;</span><span class="p">]:</span>
     <span class="n">db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
 </pre></div>
 
 
 <p>and using <code>db.all()</code> which prints out the contents of your tiny database confirms the people were inserted into the database.</p>
-<div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 </pre></div>
 
 
@@ -179,13 +177,13 @@
 </blockquote>
 <h4>Querying the Database</h4>
 <p>Now that we have data in our database, it would be useful to be able to retieve from it. TinyDB allows you to query that data by using a Query() object. So if you wanted to get a list of all the people in space on the ISS you can use this code:</p>
-<div class="highlight"><pre><span class="n">Astro</span> <span class="o">=</span> <span class="n">Query</span><span class="p">()</span>
-<span class="n">db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">craft</span> <span class="o">==</span> <span class="s">&#39;ISS&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">Astro</span> <span class="o">=</span> <span class="n">Query</span><span class="p">()</span>
+<span class="n">db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">craft</span> <span class="o">==</span> <span class="s1">&#39;ISS&#39;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>Unsuprisingly you will get all of the entries put in with ISS as the craft (which is all of them). But what if you wanted to search for a speciifc person like Peggy? Well you could you use this code:</p>
-<div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">&#39;Peggy&#39;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Peggy&#39;</span><span class="p">))</span>
 </pre></div>
 
 
@@ -200,7 +198,7 @@
 </blockquote>
 <h4>Updating the fields in the Database</h4>
 <p>Now what if one of the people in space changes the craft they are on from the ISS to Tiangong 1 (We will call it T1) we can update their data by following the syntax we previously talked about. So lets send Peggy Whitson to T1.</p>
-<div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">&#39;craft&#39;</span><span class="p">:</span><span class="s">&#39;T1&#39;</span><span class="p">},</span> <span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">&#39;Peggy&#39;</span><span class="p">)</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;craft&#39;</span><span class="p">:</span><span class="s1">&#39;T1&#39;</span><span class="p">},</span> <span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Peggy&#39;</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
 
@@ -215,7 +213,7 @@
 </blockquote>
 <h4>Removing Data from the Database</h4>
 <p>Lets now send someone home, TinyDB allows you to remove entries in the database using <code>db.remove()</code> where it will remove all of the entries matching the query placed inside of the parenthesis. Lets send Shane home and remove him from the database with the following code:</p>
-<div class="highlight"><pre><span class="n">db</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">&#39;Shane&#39;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">Astro</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Shane&#39;</span><span class="p">))</span>
 </pre></div>
 
 
