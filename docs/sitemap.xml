@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2017-01-06T00:17:48-00:00</lastmod>
+<lastmod>2017-01-07T11:17:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2017-01-06T00:17:48-00:00</lastmod>
+<lastmod>2017-01-07T11:17:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2017-01-06T00:17:48-00:00</lastmod>
+<lastmod>2017-01-07T11:17:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2017-01-06T00:17:48-00:00</lastmod>
+<lastmod>2017-01-07T11:17:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -74,15 +74,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/december-1-2016-hangout.html</loc>
-<lastmod>2016-12-01T21:00:00-08:00</lastmod>
+<loc>/bots-and-more-bots-python-monthly-december-2016.html</loc>
+<lastmod>2017-01-07T00:00:00-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/november-3-2016-hangout.html</loc>
-<lastmod>2016-11-03T21:00:00-07:00</lastmod>
+<loc>/going-live-learning-about-git-and-building-bots-november-2016-python-monthly.html</loc>
+<lastmod>2017-01-07T00:00:00-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -102,8 +102,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/october-6-2016-hangout.html</loc>
-<lastmod>2016-10-06T21:00:00-07:00</lastmod>
+<loc>/python-monthly-october-2016.html</loc>
+<lastmod>2017-01-07T00:00:00-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>

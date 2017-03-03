@@ -6,3 +6,6 @@ Tags: videos
 This month we are learning from [PyBeeWare](http://pybee.org/) creator. [Russell Keith-Magee](https://twitter.com/freakboy3742)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_-_qwJe498c" frameborder="0" allowfullscreen></iframe>
+
+[PyBeeWare](http://pybee.org)
+[Contribute to BeeWare Code](https://github.com/pybee)
