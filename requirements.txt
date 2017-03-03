@@ -1,4 +1,4 @@
 # Requirements for running pelican
 pelican
 Markdown
-
+pelican-alias

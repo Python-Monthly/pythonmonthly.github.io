@@ -49,7 +49,7 @@ MENUITEMS = [
 
 
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS=['sitemap']
+PLUGINS=['sitemap','pelican_alias']
 
 SITEMAP = {
     'format': 'xml',
