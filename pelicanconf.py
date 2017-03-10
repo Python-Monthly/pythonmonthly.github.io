@@ -30,7 +30,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('github', 'https://github.com/Python-Monthly'),
           ('google','https://plus.google.com/112952259748021652374'),
           ('envelope','mailto:info@pythonmonthly.com'),
-	  ('slack','https://pythonmonthly.slack.com'))
+	  	  ('slack','https://pythonmonthly.slack.com'),
+	  	  ('youtube','https://www.youtube.com/channel/UC7ROIuBkGtLpCIMsgoIwv0Q'))
 
 DEFAULT_PAGINATION = 10
 
@@ -42,12 +43,13 @@ THEME = 'theme/pelican-clean-blog'
 
 #Nav Menu Options
 MENUITEMS = [
+	('YouTube','https://www.youtube.com/channel/UC7ROIuBkGtLpCIMsgoIwv0Q'),
 	('Videos', '/category/videos.html')
 	]
 
 
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS=['sitemap']
+PLUGINS=['sitemap','pelican_alias']
 
 SITEMAP = {
     'format': 'xml',

@@ -13,7 +13,7 @@ To get Pelican up and running, you will first need to clone our repository
 
 Go into the project folder
 
-`$ cd Python-Monthly-Website`
+`$ cd pythonmonthly.github.io`
 
 The next step is to create a virtual environment within which to run Pelican. This is optional but highly recommended. If you do not have 'virtualenv' installed, do so by typing the following
 
