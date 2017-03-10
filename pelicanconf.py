@@ -67,8 +67,9 @@ SITEMAP = {
 }
 
 #Static Path/File Options
-STATIC_PATHS = ['extra/robots.txt']
+STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico']
 EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'}
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
