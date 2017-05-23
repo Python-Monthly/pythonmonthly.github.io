@@ -90,3 +90,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Pelican project files
+pelican.pid
+srv.pid
