@@ -3,7 +3,7 @@ Date: 2016-11-02
 
 Python Monthly is a group of people coming together to learn and challenge themselves using the Python programming language.
 
-Key Members:
+Members:
 
 Jay Miller  
 Email: kjaymiller@gmail.com
@@ -22,3 +22,6 @@ Email: danielkaczmarczyk2@gmail.com
 
 TJ Nel  
 Email: mikiozen@gmail.com
+
+Steve Gregg  
+Email: sgregg85@gmail.com
